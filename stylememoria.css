@@ -1,0 +1,73 @@
+body{
+  background-color:  #eeecec;
+}
+h2,p{
+    text-align: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+}
+h2{
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    padding: 20px;
+    font-size: 50px;
+}
+p{
+    font-size: 20px;
+    padding: 8px;
+}
+
+.display{
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section{
+    
+    display: grid;
+    grid-template-columns: repeat(5,10rem);
+    grid-template-rows: repeat(4,10rem);
+    grid-gap:6px;
+    perspective: 1000px;
+   
+}
+.card{
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+}
+
+.face, .back{
+    
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   pointer-events: none;
+}
+.back{
+  
+  background-image: url("img/jogologo.svg");
+  background-size:100%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  backface-visibility: hidden;
+}
+.toggleCard{
+  transform: rotateY(180deg);
+}
+.face{
+  transform: rotateY(-180deg);
+}
+#link a {
+
+  width: 30%;
+  padding: 30px;
+  display: flex;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-decoration: #38bfe4;
+  transition: 0.3s;
+}
+
